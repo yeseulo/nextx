@@ -15,10 +15,9 @@ export default function Home() {
         <Link href='/articles'>
           <a>Article List</a>
         </Link>
-        <button className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded'>
-          Button
-        </button>
-        <img src='/vercel.svg' alt='Vercel Logo' className={styles.logo} />
+        <Link href='/get-uuid'>
+          <a>Get UUID</a>
+        </Link>
         <DatePicker />
       </main>
     </div>
