@@ -1,5 +1,14 @@
 import ArticleList from '../../components/views/ArticleList';
 
-export default (props) => {
+const Articles = (props) => {
   return <ArticleList {...props} />;
 };
+
+Articles.getInitialProps = async function () {
+  // await
+  return {
+    list: [],
+  };
+};
+
+export default Articles;

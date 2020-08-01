@@ -2,12 +2,21 @@ import Link from 'next/link';
 import Head from 'next/head';
 
 const ArticleList = (props) => {
+  const [list, setList] = React.useState(props.list || []);
+  function reload() {
+    console.log('reload');
+    // axios.get( ... )
+    setList([]);
+  }
   return (
     <div>
       <Head>
         <title>Article List</title>
       </Head>
       <h1>Article List</h1>
+      <div>
+        <button onClick={reload}>새로고침</button>
+      </div>
       <ul>
         <li>
           <Link href='/articles/post'>
@@ -19,6 +28,9 @@ const ArticleList = (props) => {
             <a>Read me</a>
           </Link>
         </li>
+        {list.map((item) => (
+          <li></li>
+        ))}
       </ul>
     </div>
   );
